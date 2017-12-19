@@ -6,9 +6,9 @@ logger:
       name: winston
       type: '~/lib'
   winston:
-    level: error
-    format: json
+    level: debug
     transports:
       files:
         - 
           filename: out.log
+      console: true

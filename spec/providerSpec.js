@@ -26,8 +26,22 @@
 
 describe('winston logger', function() {
 
+    let levels = ['error', 'warn', 'info', 'verbose', 'debug'];
     let logger = require('@rduk/logger');
 
-    logger.error(new Error('test'));
+    describe('log methods', function() {
+        it('should have been called', function(done) {
+            levels.forEach(function(level) {
+                spyOn(logger, level).and.callThrough();
+                logger[level]('test');
+                expect(logger[level]).toHaveBeenCalled();
+            });
+
+            require('fs').exists('out.log', function(exists) {
+                expect(exists).toBe(true);
+                done();
+            })
+        });
+    });
 
 });

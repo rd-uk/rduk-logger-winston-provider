@@ -24,31 +24,19 @@
 
 'use strict';
 
-const winston = require('winston');
+describe('winston section', function() {
 
-let WinstonSection = function(section) {
-    section = section || {};
+    let Section = require('../../lib/configuration/section');
 
-    this.setLevel(section.level);
-    this.setTransports(section.transports);
-};
+    describe('instantiation', function() {
 
-WinstonSection.prototype.setLevel = function(level) {
-    this.level = level || 'info';
-};
-
-WinstonSection.prototype.setTransports = function(transports) {
-    this.transports = [];
-
-    if (transports && transports.files) {
-        transports.files.forEach(file => {
-            this.transports.push(new winston.transports.File(file));
+        describe('without section', function() {
+            it('should init section with an empty object', function() {
+                let section = new Section();
+                expect(section.level).toBe('info');
+            });
         });
-    }
 
-    if (transports && transports.console) {
-        this.transports.push(new winston.transports.Console());
-    }
-};
+    });
 
-module.exports = WinstonSection;
+});
