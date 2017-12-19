@@ -4,7 +4,7 @@
   "description": "Winston implementation of abstract logger base provider",
   "main": "lib/index.js",
   "dependencies": {
-    "@rduk/logger": "0.0.2",
+    "@rduk/logger": "0.1.0",
     "winston": "2.4.0"
   },
   "devDependencies": {
