@@ -1,0 +1,28 @@
+{
+  "name": "@rduk/logger-winston-provider",
+  "version": "0.0.1",
+  "description": "Winston implementation of abstract logger base provider",
+  "main": "lib/index.js",
+  "dependencies": {
+    "@rduk/logger": "0.0.1",
+    "winston": "2.4.0"
+  },
+  "devDependencies": {
+    "istanbul": "0.4.5",
+    "jasmine": "2.8.0",
+    "jshint": "2.9.5"
+  },
+  "scripts": {
+    "lint": "jshint lib/*.js lib/**/*.js",
+    "pretest": "npm run lint && cp ./spec/resources/config*.yml .",
+    "test": "istanbul cover node_modules/jasmine/bin/jasmine.js --report cobertura",
+    "posttest": "rm -rf ./config*yml"
+  },
+  "keywords": [
+    "rduk",
+    "logger",
+    "winston"
+  ],
+  "author": "RDUK <tech@rduk.fr>",
+  "license": "MIT"
+}
