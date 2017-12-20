@@ -24,34 +24,15 @@
 
 'use strict';
 
-const winston = require('winston');
-const extend = require('extend');
-const type = require('@rduk/configuration/lib/sections/field/type');
-const pkg = require('../../package');
+describe('transport of type File created via factory', function() {
 
-const DEFAULT = {
-    factories: {
-        files: `${pkg.name}/lib/factories/files`,
-        console: `${pkg.name}/lib/factories.console`, 
-    },
-    level: 'info',
-    transports: {
-        console: false
-    }
-};
-
-let WinstonSection = function(section) {
-    let config = extend(true, DEFAULT, section);
-
-    this.level = config.level;
-    this.transports = [];
-    Object.keys(config.transports).forEach(key => {
-        if (config.factories.hasOwnProperty(key) && !!config.transports[key]) {
-            let factory = type.load(config.factories[key]);
-            let transports = factory.create(config.transports[key]);
-            this.transports.push.apply(this.transports, transports);
-        }
+    describe('without files', function() {
+        it('should return an empty array', function() {
+            let factory = require('../../lib/factories/files');
+            let transports = factory.create(null);
+            expect(Array.isArray(transports)).toBe(true);
+            expect(transports.length).toBe(0);
+        });
     });
-};
 
-module.exports = WinstonSection;
+});

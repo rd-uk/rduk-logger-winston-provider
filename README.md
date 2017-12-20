@@ -15,6 +15,7 @@ npm i --save --save-exact @rduk/logger @rduk/logger-winston-provider
 ## Configuration
 
 ```yaml
+# config.yml (see @rduk/configuration for detail)
 ---
 logger:
   default: winston
@@ -22,13 +23,12 @@ logger:
     -
       name: winston
       type: '@rduk/logger-winston-provider'
-  winston:
-    level: debug
-    transports:
-      files:
-        - 
-          filename: out.log
-      console: true
+      level: debug
+      transports:
+        files:
+          - 
+            filename: out.log
+        console: true
 ```
 
 ## Usage
@@ -42,6 +42,41 @@ logger.verbose('verbose');
 logger.debug('debug'); 
 ```
 
-License and copyright
+## Transports
+By default, only the winston core transports are available (`file`, `console`, `http`).
+
+If you need another transport, you can create a factory.
+
+### Example (winston logstash)
+
+```js
+const winston = require('winston');
+require('winston-logstash');
+
+module.exports = {
+    create: function(options) {
+        return [new winston.transports.Logstash(options)];
+    }
+};
+```
+
+```yaml
+logger:
+  default: winston
+  providers:
+    -
+      name: winston
+      type: '@rduk/logger-winston-provider'
+      factories:
+        logstash: '~/path/to/factory'
+      level: info
+      transports:
+        logstash:
+          host: 'example.com'
+          port: 11111
+          node_name: myapp
+```
+
+## License and copyright
 
 See [LICENSE](LICENSE) file
