@@ -1,6 +1,6 @@
 {
   "name": "@rduk/logger-winston-provider",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Winston implementation of abstract logger base provider",
   "main": "lib/index.js",
   "dependencies": {
