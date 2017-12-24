@@ -24,6 +24,14 @@
     "logger",
     "winston"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rd-uk/rduk-logger-winston-provider.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rd-uk/rduk-logger-winston-provider/issues"
+  },
+  "homepage": "https://github.com/rd-uk/rduk-logger-winston-provider#readme",
   "author": "RDUK <tech@rduk.fr>",
   "license": "MIT"
 }
