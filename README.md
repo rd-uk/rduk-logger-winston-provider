@@ -1,5 +1,7 @@
 # RDUK - Winston logger provider
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/rd-uk/rduk-logger-winston-provider.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/rd-uk/rduk-logger-winston-provider.svg?branch=master)](https://travis-ci.org/rd-uk/rduk-logger-winston-provider)
 [![Coverage Status](https://coveralls.io/repos/github/rd-uk/rduk-logger-winston-provider/badge.svg?branch=master)](https://coveralls.io/github/rd-uk/rduk-logger-winston-provider?branch=master)
 [![bitHound Overall Score](https://www.bithound.io/github/rd-uk/rduk-logger-winston-provider/badges/score.svg)](https://www.bithound.io/github/rd-uk/rduk-logger-winston-provider)
