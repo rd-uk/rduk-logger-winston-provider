@@ -1,23 +1,30 @@
 {
   "name": "@rduk/logger-winston-provider",
-  "version": "0.2.5",
+  "version": "1.0.0",
   "description": "Winston implementation of abstract logger base provider",
+  "engines": {
+    "node": ">=6.4.0"
+  },
   "main": "lib/index.js",
   "dependencies": {
-    "@rduk/configuration": "^2.1.0",
-    "@rduk/logger": "^0.1.5",
+    "@rduk/configuration": "^2.1.1",
+    "@rduk/logger": "^1.0.0",
     "extend": "3.0.1",
     "winston": "2.4.0"
   },
   "devDependencies": {
     "coveralls": "3.0.0",
     "istanbul": "0.4.5",
-    "jasmine": "2.9.0"
+    "jasmine": "2.9.0",
+    "standard": "10.0.3"
   },
   "scripts": {
-    "pretest": "cp ./spec/resources/config*.yml .",
+    "lint": "standard --fix",
+    "pretest": "npm run lint && cp ./spec/resources/config*.yml .",
     "test": "istanbul cover node_modules/jasmine/bin/jasmine.js --report cobertura",
-    "posttest": "rm -rf ./config*yml && rm out.log && istanbul report && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+    "posttest": "rm -rf ./config*yml && rm out.log",
+    "report": "istanbul report",
+    "coveralls": "npm run report && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "keywords": [
     "rduk",
