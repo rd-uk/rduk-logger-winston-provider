@@ -7,18 +7,22 @@
   },
   "main": "lib/index.js",
   "dependencies": {
-    "@rduk/configuration": "2.2.0",
-    "@rduk/logger": "1.0.1",
     "extend": "3.0.1"
   },
   "devDependencies": {
-    "coveralls": "3.0.0",
+    "@rduk/configuration": "2.x",
+    "@rduk/errors": "1.x",
+    "@rduk/logger": "1.x",
+    "@rduk/provider": "3.x",
+    "coveralls": "3.0.1",
     "istanbul": "0.4.5",
-    "jasmine": "2.9.0",
-    "standard": "10.0.3",
+    "jasmine": "3.1.0",
+    "standard": "11.0.1",
     "winston": "2.x"
   },
   "peerDependencies": {
+    "@rduk/configuration": "2.x",
+    "@rduk/logger": "1.x",
     "winston": "2.x"
   },
   "scripts": {
@@ -36,7 +40,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rd-uk/rduk-logger-winston-provider.git"
+    "url": "https://github.com/rd-uk/rduk-logger-winston-provider"
   },
   "bugs": {
     "url": "https://github.com/rd-uk/rduk-logger-winston-provider/issues"
