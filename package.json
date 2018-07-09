@@ -7,7 +7,7 @@
   },
   "main": "lib/index.js",
   "dependencies": {
-    "@rduk/configuration": "2.2.0",
+    "@rduk/configuration": "2.2.1",
     "@rduk/logger": "1.0.1",
     "extend": "3.0.1"
   },
