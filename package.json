@@ -18,7 +18,7 @@
     "istanbul": "0.4.5",
     "jasmine": "3.1.0",
     "standard": "11.0.1",
-    "winston": "2.x"
+    "winston": "^3.1.0"
   },
   "peerDependencies": {
     "@rduk/configuration": "2.x",
