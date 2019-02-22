@@ -14,7 +14,7 @@
     "@rduk/errors": "1.x",
     "@rduk/logger": "1.x",
     "@rduk/provider": "3.x",
-    "coveralls": "3.0.1",
+    "coveralls": "3.0.3",
     "istanbul": "0.4.5",
     "jasmine": "3.1.0",
     "standard": "11.0.1",
