@@ -10,7 +10,7 @@
     "extend": "3.0.1"
   },
   "devDependencies": {
-    "@rduk/configuration": "2.x",
+    "@rduk/configuration": "^2.2.3",
     "@rduk/errors": "1.x",
     "@rduk/logger": "1.x",
     "@rduk/provider": "3.x",
