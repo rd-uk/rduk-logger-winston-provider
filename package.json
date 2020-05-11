@@ -17,7 +17,7 @@
     "coveralls": "3.0.1",
     "istanbul": "0.4.5",
     "jasmine": "3.1.0",
-    "standard": "11.0.1",
+    "standard": "14.3.4",
     "winston": "2.x"
   },
   "peerDependencies": {
